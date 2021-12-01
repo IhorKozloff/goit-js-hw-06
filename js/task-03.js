@@ -12,3 +12,10 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryEl = document.querySelector('.gallery');
+galleryEl.classList.add('task-03-style');
+
+const addPicturesToGallaryMurkUp = images.map(item => {
+return galleryEl.insertAdjacentHTML('beforeend',`<li><img src = ${item.url} alt = ${item.alt.split(" ").join("-")} class = image> </li>`);
+});
