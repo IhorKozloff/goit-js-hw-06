@@ -32,3 +32,12 @@ button {
 .image {
   width: 1200px;
 }
+
+.task-10-style, .boxes__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
