@@ -7,9 +7,9 @@ const refs = {
   magicCreateBtnEl: document.querySelector('[data-create]'),
   magicDestroyBtnEl: document.querySelector('[data-destroy]'),
   quantityInputEl: document.querySelector('input'),
-  toDivsArray: [],
-  allNewDivs: [],
 }
+
+const toDivsArray = [];
 
 const buildingFunc = () => {
   let zIndexEl = 1;
@@ -28,23 +28,20 @@ const buildingFunc = () => {
     width += 10;
     height += 10;
     zIndexEl -= 1;  
-    refs.toDivsArray.push(oneDiv);
+    toDivsArray.push(oneDiv);
   }
-  refs.gameBoardEl.append(...refs.toDivsArray);
-  refs.allNewDivs = document.querySelectorAll('.boxes__box');
+  refs.gameBoardEl.append(...toDivsArray);
 }
 
 
 
 const burnThemAll = () => {
-  refs.allNewDivs.forEach((item) => {
-   item.remove();
- });
- refs.quantityInputEl.value = 0;
- 
+//    toDivsArray.forEach((item) => {
+//    item.remove();
+// });
+  refs.gameBoardEl.innerHTML = "";
+  refs.quantityInputEl.value = 0;
 }
-
-
 
 refs.magicCreateBtnEl.addEventListener('click', buildingFunc);
 refs.magicDestroyBtnEl.addEventListener('click', burnThemAll);
