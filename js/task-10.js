@@ -39,8 +39,9 @@ const burnThemAll = () => {
 //    toDivsArray.forEach((item) => {
 //    item.remove();
 // });
+  toDivsArray.splice(0, toDivsArray.length);
   refs.gameBoardEl.innerHTML = "";
-  refs.quantityInputEl.value = 0;
+  refs.quantityInputEl.value = "";
 }
 
 refs.magicCreateBtnEl.addEventListener('click', buildingFunc);
