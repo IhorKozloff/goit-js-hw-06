@@ -36,7 +36,7 @@ const buildingFunc = () => {
 
 
 const burnThemAll = () => {
-//    toDivsArray.forEach((item) => {
+//    toDivsArray.forEach((i, 8. 9) => {
 //    item.remove();
 // });
   refs.gameBoardEl.innerHTML = "";

@@ -41,3 +41,38 @@ button {
 
 
 }
+.icon-icon {
+  fill: #02F7E9;
+}
+
+.icon-icon:hover {
+  fill: #0fafa7;
+  cursor: pointer;
+  animation-name: move;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animat {
+  animation-name: move;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+
+@keyframes move {
+  0% {
+    margin-left: 0px;
+  }
+
+50% {
+  margin-left: 10px;
+  /* transform: rotateX(90deg); */
+}
+
+  100% {
+    margin-left: 0px;
+  }
+}
